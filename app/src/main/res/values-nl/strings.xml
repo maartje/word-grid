@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Eerste Woordjes</string>
+    <string name="childlock_message">"Kinderslot actief, druk drie keer op 'back'"</string>
+</resources>
