@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Premiers mots</string>
+    <string name="app_name">Premiers Mots</string>
     <string name="childlock_message">"Verrouillage enfant actif, pressez la touche trois fois"</string>
 </resources>

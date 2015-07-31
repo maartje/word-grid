@@ -16,7 +16,6 @@ public class MainActivity extends ChildLockedActivity {
 
 	public static final String DISPLAYED_ITEM_IDS = "DISPLAYED_ITEM_IDS";
 	public static final String NON_DISPLAYED_ITEM_IDS = "NON_DISPLAYED_ITEM_IDS";
-	public static final String MEDIA_VOLUME = "MEDIA_VOLUME";
 	private SoundPool soundPool;
 	private ThumbViewImageAnimator thumbViewAnimator;
 	private AudioManager audioManager;
@@ -55,11 +54,11 @@ public class MainActivity extends ChildLockedActivity {
 		audioManager =
 				(AudioManager)getSystemService(this.AUDIO_SERVICE);
 
-		if (savedInstanceState == null && audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) <= 2) //open first time
+		int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+		if (savedInstanceState == null && audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) <= 0.5 * maxVolume) //open first time with media volume low
 		{
-			int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-			int initialVolume = (int)(0.6*maxVolume);
-			audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, initialVolume, AudioManager.FLAG_PLAY_SOUND);
+			int initialVolume = (int)(0.5 * maxVolume);
+			audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, initialVolume, AudioManager.FLAG_SHOW_UI);
 		}
 	}
 
@@ -141,7 +140,6 @@ public class MainActivity extends ChildLockedActivity {
 		outState.putIntArray(DISPLAYED_ITEM_IDS, wordItemManager.getDisplayedItemIds());
 		outState.putIntArray(NON_DISPLAYED_ITEM_IDS, wordItemManager.getNonDisplayedItemIds());
 		int mediaVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-		outState.putInt(MEDIA_VOLUME, mediaVolume);
 	}
 
 }
