@@ -1,0 +1,31 @@
++ Block hardware buttons where possible
+
++ Support for multi touch: react on "finger-up", ignore fingers that stay on screen
+
++ support multiple devices: Tablets show 12 pictures
+
++ launcher icon
+
++ support multiple devices: API version?
+
+- Support NEUTRAL (no name), NL, ENG, GER, 
+
+- sound volume and quality
+
++ en,nl version of child lock text
+
+
+------- multi language support optional: merge sound and spoken name at runtime
+
+------- Startup activity: big button with picture of animals
+
+------- performance: preload images to bitmap
+
+-------- performance: do work on non-ui thread
+
+-------- code quality: refactor and test
+
+------- optional: sync sound and animation
+
+
+

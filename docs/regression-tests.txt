@@ -1,0 +1,179 @@
+========================================
+testing the childlock functionality
+=======================================
+
+//Android 5:
+WHEN I start the app 
+THEN I see the child lock option dialog
+WHEN I choose to lock the app
+AND I press the back button
+THEN I see a message that the childlock is active
+WHEN I change navigation
+THEN I do not see a message
+WHEN I unlock
+AND I press the back button
+THEN the app becomes invisible
+WHEN I wait a few seconds
+AND I resume the app via the recent apps button
+THEN I see the childlock option dialog
+WHEN I say no
+AND I press the back button
+THEN the app becomes invisible
+
+//Android 4:
+WHEN I start the app 
+AND I press the back button
+THEN I See a message saying that I have to press three times
+WHEN I press the back button three times slow
+THEN I see this message again each third press
+WHEN I press the back button three times fast
+THEN the app becomes invisible
+
+--------------------------------------------------------------------------
+
+========================================
+testing the volume adjust functionality
+========================================
+
+//Android 5, android 4:
+WHEN I start the app with volume below 0.7MAX
+AND I do not lock the app
+THEN the volume is set to 0.7MAX
+AND a visuable signal is on the screen 
+WHEN I click an animal
+THEN the volume is reasonable
+AND I can change it during the animation
+AND the change is shown visually
+WHEN the animation is finished
+AND I set the volume back to a low value 0.2MAX
+THEN the change is shown visually
+WHEN I click an animal
+THEN the volume is low
+WHEN I change orientation
+THEN the volume is not changed
+WHEN I switch to another app
+AND go back to this app
+THEN the volume is not changed
+WHEN I close the app
+AND I set the volume to 0.9MAX
+AND I start the app
+THEN the volume is 0.9MAX
+AND no visuable signal is shown
+
+========================================
+testing the touch functionality
+=======================================
+
+//Android 5
+WHEN I start the app
+AND I click an animal
+THEN the animal is animated
+WHEN I keep two fingers on the screen
+AND I touch an animal by a third finger
+THEN the animal is animated
+WHEN I leave up one of the holding fingers
+THEN the animal below it is not animated
+
+========================================
+testing orientation change
+=======================================
+
+//Android 5
+WHEN I start the app
+AND I animate 6 animals and write down their names
+AND I write down the names of the animals on the screen
+AND I change the orientation
+THEN I see the same animals on the screen adjusted to the new orientation
+WHEN I animate 6 animals and write down the names of the new ones
+THEN I see that the new animals are not in the list of previosly animated animals
+
+WHEN I change orientation during an animation
+THEN the animation is stopped
+AND the animated animal is shown on the screen again
+
+========================================
+testing multi language support
+=======================================
+//Android 5 (emulator)
+REPEAT FOR en, fr, du, nl, ch, es
+WHEN I click an animal
+THEN the name is spoken in the selected language
+(except -en on dutch or german phone)
+
+WHEN I choose an unsupported language
+THEN I hear only animal sound
+
+//Android 5 (phone)
+WHEN I choose -en on a dutch phone
+THEN dutch name is spoken
+
+//ANDROID STUDIO
+res pattern looks good with a default and 9 specific languages for each word
+
+//FILE Explorer
+WHEN I play the name sounds in a language dir
+THEN they are spoken in the expected language
+AND volume is ok-ish
+WHEN I play the name sounds in the default dir
+THEN I only hear animal sounds
+AND volume is ok-ish
+
+
+========================================
+testing core functionality
+=======================================
+//Android 5
+WHEN I start the app
+THEN I see a grid filled with animals
+WHEN I click an animal
+THEN the animal is zoomed-out
+AND the other animals are fade out
+AND the animal is animated
+AND I hear the animals sound
+AND I hear the name of the animal spoken
+AND the animal is zoomed in
+AND and the animal fades out
+AND a new animal fades in
+WHEN I animate multiple animals after each other,
+THEN new animals appear until the number 18 is reached
+WHEN I animate more animals,
+THEN they reappear in order
+
+WHEN I start an animation
+THEN I can not start a new animation untill the animation is fully completed
+
+========================================
+testing ui
+=======================================
+
+//Android Phone
+h3 x b2
+Animation looks good
+
+//Android Tablet 7 inch
+h4 x b3
+Animation looks good
+
+//Android Tablet 10 inch
+h4 x b3
+Animation looks good
+
+//Android Phone landscape
+h2 x b3
+Animation looks good
+
+//Android Tablet 7 inch landscape
+h3 x b4
+Animation looks good
+
+//Android Tablet 10 inch landscape
+h3 x b4
+Animation looks good
+
+========================================
+testing minimum SDK
+=======================================
+WHEN I start the app on API 14
+THEN I see the grid with animals
+AND I can play an animation
+
