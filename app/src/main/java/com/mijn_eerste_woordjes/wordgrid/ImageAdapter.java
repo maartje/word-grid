@@ -61,7 +61,7 @@ public class ImageAdapter extends BaseAdapter {
 		final AspectRatioImageView imageView;
 		if (convertView == null) {
 			imageView = new AspectRatioImageView(context, aspectRatio);
-			imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+			imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 			imageView.setBackgroundColor(Color.WHITE);
 		} else {
 			imageView = (AspectRatioImageView) convertView;
