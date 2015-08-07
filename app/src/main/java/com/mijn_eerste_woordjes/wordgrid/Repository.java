@@ -9,10 +9,21 @@ public class Repository {
 
     private final static int DEFAULT_DURATION_IN_MILLISECONDS = 5000;
     
-    public ArrayList<WordItem> getWordItems(){
-        //TODO use bitmap instead of resourceId for performance (and more generic)
-        return getVehicles();
-//        return getAnimals();
+    public ArrayList<WordItem> getWordItems(String category){
+        switch (category){
+            case "ANIMALS": return getAnimals();
+            case "VEHICLES": return getVehicles();
+            case "ALL": return getAll();
+            default:
+                return getAnimals();
+        }
+    }
+
+    private ArrayList<WordItem> getAll() {
+        ArrayList<WordItem> result = new ArrayList<WordItem>();
+        result.addAll(getAnimals());
+        result.addAll(getVehicles());
+        return result;
     }
 
     private ArrayList<WordItem> getVehicles() {

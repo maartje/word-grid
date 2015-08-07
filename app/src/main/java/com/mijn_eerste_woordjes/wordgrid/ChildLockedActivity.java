@@ -21,11 +21,13 @@ public class ChildLockedActivity  extends Activity{
     public static final String ON_PAUSE_TIME = "ON_PAUSE_TIME";
     private ArrayList<Long> backPressTimes;
     private long onPauseTime;
+    protected boolean skipLockDialog;
 
     public ChildLockedActivity()
     {
         backPressTimes = new ArrayList<Long>();
         onPauseTime = 0;
+        skipLockDialog = false;
     }
 
     @Override
@@ -57,7 +59,7 @@ public class ChildLockedActivity  extends Activity{
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public void onResume() {
         super.onResume();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && !isCreatedBecauseOfOrientationChange()) {
+        if (!skipLockDialog && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && !isCreatedBecauseOfOrientationChange()) {
             startLockTask();
         }
 
@@ -85,7 +87,7 @@ public class ChildLockedActivity  extends Activity{
     @Override
     public void onBackPressed() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            super.onBackPressed();
+            handleBackButton();
             return; //screen pinning is used as child lock
         }
             long currentTimeInMilliseconds = getCurrentTimeInMilliseconds();
@@ -103,8 +105,12 @@ public class ChildLockedActivity  extends Activity{
         if (backPressTimes.size() >= 3)
         {
             backPressTimes.clear();
-            super.onBackPressed();
+            handleBackButton();
         }
+    }
+
+    protected void handleBackButton() {
+        super.onBackPressed();
     }
 
     private long getCurrentTimeInMilliseconds() {

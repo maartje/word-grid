@@ -1,6 +1,7 @@
 package com.mijn_eerste_woordjes.wordgrid;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -20,10 +21,15 @@ public class MainActivity extends ChildLockedActivity {
 	private ThumbViewImageAnimator thumbViewAnimator;
 	private AudioManager audioManager;
 	private WordItemManager wordItemManager;
+	private String category;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		Intent intent = getIntent();
+		category = intent.getStringExtra(HomeActivity.CATEGORY);
+		skipLockDialog = intent.getBooleanExtra(HomeActivity.SKIP_LOCK_DIALOG, false);
 
 		// initializes the views and sets the content view
 		setContentView(R.layout.activity_main);
@@ -31,7 +37,7 @@ public class MainActivity extends ChildLockedActivity {
 
 		//initialize and attach the adapter for the grid view
 		Repository repo = new Repository();
-		List<WordItem> wordItems = repo.getWordItems();
+		List<WordItem> wordItems = repo.getWordItems(category);
 		ScreenSizeManager screenSizeManager = new ScreenSizeManager(this);
 
 		wordItemManager = new WordItemManager();
@@ -51,14 +57,14 @@ public class MainActivity extends ChildLockedActivity {
 		thumbViewAnimator = new ThumbViewImageAnimator(this, 750, 250);
 		gridview.setOnTouchListener(thumbViewAnimator);
 
-		audioManager =
-				(AudioManager)getSystemService(this.AUDIO_SERVICE);
-
-		int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-		if (savedInstanceState == null && audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) <= 0.5 * maxVolume) //open first time with media volume low
-		{
-			int initialVolume = (int)(0.5 * maxVolume);
-			audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, initialVolume, AudioManager.FLAG_SHOW_UI);
+		audioManager = (AudioManager)getSystemService(this.AUDIO_SERVICE);
+		if(!skipLockDialog){
+			int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+			if (savedInstanceState == null && audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) <= 0.5 * maxVolume) //open first time with media volume low
+			{
+				int initialVolume = (int)(0.5 * maxVolume);
+				audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, initialVolume, AudioManager.FLAG_SHOW_UI);
+			}
 		}
 	}
 
@@ -72,6 +78,15 @@ public class MainActivity extends ChildLockedActivity {
 			initializeSoundPool();
 		}
 	}
+
+	@Override
+	protected void handleBackButton() {
+		Intent intent = new Intent(this, HomeActivity.class);
+		intent.putExtra(HomeActivity.CATEGORY, category);
+		intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+		startActivity(intent);
+	}
+
 
 	private void initializeSoundPool() {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
