@@ -83,7 +83,7 @@ public class MainActivity extends ChildLockedActivity {
 	protected void handleBackButton() {
 		Intent intent = new Intent(this, HomeActivity.class);
 		intent.putExtra(HomeActivity.CATEGORY, category);
-		intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(intent);
 	}
 
@@ -131,6 +131,7 @@ public class MainActivity extends ChildLockedActivity {
 		// release system resources
 		soundPool.release();
 		soundPool = null;
+		skipLockDialog = false;
 	}
 
 	@Override
@@ -154,7 +155,6 @@ public class MainActivity extends ChildLockedActivity {
 		super.onSaveInstanceState(outState);
 		outState.putIntArray(DISPLAYED_ITEM_IDS, wordItemManager.getDisplayedItemIds());
 		outState.putIntArray(NON_DISPLAYED_ITEM_IDS, wordItemManager.getNonDisplayedItemIds());
-		int mediaVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 	}
 
 }

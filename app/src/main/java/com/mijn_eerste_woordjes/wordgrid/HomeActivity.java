@@ -29,6 +29,12 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home);
     }
 
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+        lastCategory = null;
+    }
 
 
     @Override
@@ -37,6 +43,7 @@ public class HomeActivity extends Activity {
         getMenuInflater().inflate(R.menu.menu_home, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -65,7 +72,12 @@ public class HomeActivity extends Activity {
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra(CATEGORY, category);
         intent.putExtra(SKIP_LOCK_DIALOG, isCreatedFromMain());
-//        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
+    }
+
+    @Override
+    public void onNewIntent(Intent intent){
+        super.onNewIntent(intent);
+        lastCategory = intent.getStringExtra(HomeActivity.CATEGORY);
     }
 }
