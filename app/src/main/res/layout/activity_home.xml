@@ -1,23 +1,52 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mijn_eerste_woordjes.wordgrid.HomeActivity">
+    android:stretchColumns="1">
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/animals_nav_button"
-        android:id="@+id/animals_nav_button"
-        android:onClick="startAnimals"/>
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/vehicles_nav_button"
-        android:id="@+id/vehicles_nav_button"
-        android:onClick="startVehicles"/>
+    <TableRow
+        android:onClick="startAnimals">
 
-</LinearLayout>
+        <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/animals_category"
+            android:src="@drawable/butterfly"
+            android:layout_margin="3dip"/>
+
+        <TextView
+            android:text="Animals"
+            android:gravity="right"
+            android:padding="3dip" />
+    </TableRow>
+
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
+
+    <TableRow
+        android:onClick="startVehicles">
+
+        <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/vehicles_category"
+            android:src="@drawable/category_vehicles"
+            android:layout_margin="3dip"/>
+
+        <TextView
+            android:text="Vehicles"
+            android:gravity="right"
+            android:padding="3dip" />
+    </TableRow>
+
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
+
+</TableLayout>
 
