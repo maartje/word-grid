@@ -60,9 +60,9 @@ public class MainActivity extends ChildLockedActivity {
 		audioManager = (AudioManager)getSystemService(this.AUDIO_SERVICE);
 		if(!skipLockDialog){
 			int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-			if (savedInstanceState == null && audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) <= 0.5 * maxVolume) //open first time with media volume low
+			if (savedInstanceState == null && audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) <= 0.7 * maxVolume) //open first time with media volume low
 			{
-				int initialVolume = (int)(0.5 * maxVolume);
+				int initialVolume = (int)(0.7 * maxVolume);
 				audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, initialVolume, AudioManager.FLAG_SHOW_UI);
 			}
 		}

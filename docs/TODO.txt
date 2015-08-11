@@ -1,31 +1,37 @@
-+ Block hardware buttons where possible
+1) Reduce size
+* proguard
+* compress gif
+* wav => acc
+* do not load support lib
 
-+ Support for multi touch: react on "finger-up", ignore fingers that stay on screen
+2) Prefer SD-Card
+* set ption to install on SD
 
-+ support multiple devices: Tablets show 12 pictures
+3) Home screen divided into two halfes: animals, vehices
+- works for different sizes and orientation
+- childlock and backbutton works fine
 
-+ launcher icon
+4) Vehicles category
 
-+ support multiple devices: API version?
+5) support more languages:
+- currently supported
+- download languages
+- top 10 languages education
+- top 10 languages
 
-- Support NEUTRAL (no name), NL, ENG, GER, 
+---------------------------------------------------------------------
+- Features listed as key points (no adds, childlock, multiple languages, optimized screen for child usage)
+- Feature image
+- Animals/Vehicles mentioned
+- Screenshots: Vincent, vehicle, 3 different ones
+- languages mentioned
+- Promo video?
 
-- sound volume and quality
-
-+ en,nl version of child lock text
+-------------------------------------------------
 
 
-------- multi language support optional: merge sound and spoken name at runtime
 
-------- Startup activity: big button with picture of animals
 
-------- performance: preload images to bitmap
-
--------- performance: do work on non-ui thread
-
--------- code quality: refactor and test
-
-------- optional: sync sound and animation
 
 
 

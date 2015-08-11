@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Primeras Palabras</string>
-    <string name="childlock_message">"Bloqueo Infantil activo, pulse el botón tres veces"</string>
+    <string name="childlock_message">Bloqueo Infantil activo, pulse el botón tres veces</string>
 </resources>
