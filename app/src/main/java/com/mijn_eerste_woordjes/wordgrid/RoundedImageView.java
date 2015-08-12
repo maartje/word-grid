@@ -28,6 +28,12 @@ public class RoundedImageView extends ImageView {
         super(context, attrs, defStyle);
     }
 
+
+    @Override
+    public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(heightMeasureSpec, heightMeasureSpec);
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
 

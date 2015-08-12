@@ -14,8 +14,7 @@
         android:layout_width="0dp">
 
         <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
-            android:layout_width="156dp"
-            android:layout_height="156dp"
+            android:layout_height="match_parent"
             android:id="@+id/animals_category"
             android:src="@drawable/butterfly"
             android:layout_margin="12dip"/>
@@ -36,8 +35,7 @@
         android:gravity="center">
 
         <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
-            android:layout_width="156dp"
-            android:layout_height="156dp"
+            android:layout_height="match_parent"
             android:id="@+id/vehicles_category"
             android:src="@drawable/category_vehicles"
             android:layout_margin="12dip"/>
