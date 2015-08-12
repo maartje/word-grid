@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Erste Wörter</string>
-    <string name="childlock_message">Parental aktiv, drücken Sie dreimal auf die Schaltfläche 'Zurück'</string>
+    <string name="childlock_message">Parental aktiv, drücken Sie dreimal auf die Schaltfläche \'Zurück\'</string>
 </resources>
