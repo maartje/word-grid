@@ -3,24 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:stretchColumns="*"
-    android:background="#24772F">
+    android:background="#24772F"
+    android:weightSum="10">
 
 
     <TableRow
         android:onClick="startAnimals"
         android:background="#FFD900"
+        android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="4"
         android:gravity="center_vertical">
 
         <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:id="@+id/animals_category"
             android:src="@drawable/butterfly"
             android:layout_marginLeft="12dip"
             android:layout_marginBottom="12dip"
             android:layout_marginTop="12dip"/>
+    </TableRow>
 
+    <TableRow
+        android:onClick="startVehicles"
+        android:background="#FFD900"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
         <TextView
             android:text="Animals"
             android:gravity="end"
@@ -32,18 +42,27 @@
     <TableRow
         android:onClick="startVehicles"
         android:background="#025B97"
+        android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="4"
         android:gravity="center_vertical">
 
         <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:id="@+id/vehicles_category"
             android:src="@drawable/category_vehicles"
             android:layout_marginLeft="12dip"
             android:layout_marginBottom="12dip"
             android:layout_marginTop="12dip"/>
+    </TableRow>
 
+    <TableRow
+        android:onClick="startVehicles"
+        android:background="#025B97"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
         <TextView
             android:text="VehiclesLangWoord"
             android:gravity="end"
