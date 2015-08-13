@@ -17,7 +17,7 @@
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/activity_margin"
             android:gravity="center_horizontal"
             android:background="#FFD900"
             android:id="@+id/animals_category"
@@ -27,11 +27,11 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="0"
-            android:padding="12dp"
+            android:padding="@dimen/activity_margin"
             android:gravity="center_horizontal"
             android:background="#FFD900"
             android:text="Animals"
-            android:textSize="36sp"/>
+            android:textSize="@dimen/home_text_size"/>
 
     </LinearLayout>
 
@@ -47,7 +47,7 @@
             android:layout_height="0dp"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/activity_margin"
             android:gravity="center_horizontal"
             android:background="#025B97"
             android:id="@+id/vehicles_category"
@@ -57,10 +57,10 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="0"
-            android:padding="12dp"
+            android:padding="@dimen/activity_margin"
             android:gravity="center_horizontal"
             android:background="#025B97"
             android:text="VehiclesLangWoord"
-            android:textSize="36sp"/>
+            android:textSize="@dimen/home_text_size"/>
     </LinearLayout>
 </LinearLayout>

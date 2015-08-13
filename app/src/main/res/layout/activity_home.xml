@@ -17,15 +17,15 @@
             android:layout_height="match_parent"
             android:id="@+id/animals_category"
             android:src="@drawable/butterfly"
-            android:layout_marginLeft="12dip"
-            android:layout_marginBottom="12dip"
-            android:layout_marginTop="12dip"/>
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"/>
 
         <TextView
-            android:text="Animals"
+            android:text="@string/animals_nav_button"
             android:gravity="end"
-            android:padding="12dip"
-            android:textSize="36sp"/>
+            android:padding="@dimen/activity_margin"
+            android:textSize="@dimen/home_text_size"/>
     </TableRow>
 
 
@@ -40,15 +40,15 @@
             android:layout_height="match_parent"
             android:id="@+id/vehicles_category"
             android:src="@drawable/category_vehicles"
-            android:layout_marginLeft="12dip"
-            android:layout_marginBottom="12dip"
-            android:layout_marginTop="12dip"/>
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"/>
 
         <TextView
-            android:text="VehiclesLangWoord"
+            android:text="@string/vehicles_nav_button"
             android:gravity="end"
-            android:padding="12dip"
-            android:textSize="36sp"/>
+            android:padding="@dimen/activity_margin"
+            android:textSize="@dimen/home_text_size"/>
     </TableRow>
 
 
