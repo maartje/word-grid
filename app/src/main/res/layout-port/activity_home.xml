@@ -2,46 +2,65 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="12dp"
-    android:gravity="center_horizontal"
-    android:paddingRight="12dp"
-    android:background="#24772F"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#24772F">
 
-    <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_width="100dp"
         android:layout_weight="1"
         android:gravity="center_horizontal"
         android:background="#FFD900"
-        android:id="@+id/animals_category"
-        android:src="@drawable/butterfly" />
+        android:orientation="vertical" >
 
-    <TextView
-        android:layout_height="wrap_content"
+        <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal"
+            android:background="#FFD900"
+            android:id="@+id/animals_category"
+            android:src="@drawable/butterfly" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="0"
+            android:padding="12dp"
+            android:gravity="center_horizontal"
+            android:background="#FFD900"
+            android:text="Animals"
+            android:textSize="36sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_weight="0"
-        android:gravity="center_horizontal"
-        android:background="#FFD900"
-        android:text="Animals"
-        android:textSize="36sp"/>
-
-    <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
         android:layout_height="0dp"
-        android:layout_width="50dp"
         android:layout_weight="1"
         android:gravity="center_horizontal"
-        android:background="#FFD900"
-        android:id="@+id/vehicles_category"
-        android:src="@drawable/category_vehicles" />
+        android:background="#025B97"
+        android:orientation="vertical" >
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_weight="0"
-        android:gravity="center_horizontal"
-        android:background="#FFD900"
-        android:text="VehiclesLangWoord"
-        android:textSize="36sp"/>
+        <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal"
+            android:background="#025B97"
+            android:id="@+id/vehicles_category"
+            android:src="@drawable/category_vehicles" />
 
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="0"
+            android:padding="12dp"
+            android:gravity="center_horizontal"
+            android:background="#025B97"
+            android:text="VehiclesLangWoord"
+            android:textSize="36sp"/>
+    </LinearLayout>
 </LinearLayout>
