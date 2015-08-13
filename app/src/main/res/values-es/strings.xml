@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Primeras Palabras</string>
     <string name="childlock_message">Bloqueo Infantil activo, pulse el botón tres veces</string>
+
+    <string name="animals_nav_button">Animales</string>
+    <string name="vehicles_nav_button">Vehículos</string>
+
 </resources>

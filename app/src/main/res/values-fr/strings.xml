@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Premiers Mots</string>
     <string name="childlock_message">Verrouillage enfant actif, pressez la touche trois fois</string>
+
+    <string name="animals_nav_button">Animaux</string>
+    <string name="vehicles_nav_button">Véhicules</string>
+
 </resources>

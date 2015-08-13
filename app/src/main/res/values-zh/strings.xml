@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">第一个字</string>
     <string name="childlock_message">童锁活跃，按下按钮三次</string>
+
+    <string name="animals_nav_button">动物</string>
+    <string name="vehicles_nav_button">汽车</string>
+
 </resources>
