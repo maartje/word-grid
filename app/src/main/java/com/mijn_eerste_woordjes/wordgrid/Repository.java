@@ -58,7 +58,7 @@ public class Repository {
         wordItems.add(new WordItem(8, R.drawable.dog, R.raw.dog, DEFAULT_DURATION_IN_MILLISECONDS, R.raw.dog_word));
         wordItems.add(new WordItem(9, R.drawable.frog, R.raw.frog, DEFAULT_DURATION_IN_MILLISECONDS, R.raw.frog_word));
         wordItems.add(new WordItem(10, R.drawable.leopard, R.raw.leopard, DEFAULT_DURATION_IN_MILLISECONDS, R.raw.leopard_word));
-        wordItems.add(new WordItem(11, R.drawable.seal, R.raw.seal, DEFAULT_DURATION_IN_MILLISECONDS, R.raw.seal_word));
+        //wordItems.add(new WordItem(11, R.drawable.seal, R.raw.seal, DEFAULT_DURATION_IN_MILLISECONDS, R.raw.seal_word));
         wordItems.add(new WordItem(12, R.drawable.snake, R.raw.snake, DEFAULT_DURATION_IN_MILLISECONDS, R.raw.snake_word));
         wordItems.add(new WordItem(13, R.drawable.fish, R.raw.fish, DEFAULT_DURATION_IN_MILLISECONDS, R.raw.fish_word));
         wordItems.add(new WordItem(14, R.drawable.penguin, R.raw.penguin, DEFAULT_DURATION_IN_MILLISECONDS, R.raw.penguin_word));
