@@ -2,6 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.mijn_eerste_woordjes.wordgrid.HomeActivity">
-    <item android:id="@+id/action_language" android:title="@string/language_setting"
+    <item android:id="@+id/action_language" android:title="language"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
