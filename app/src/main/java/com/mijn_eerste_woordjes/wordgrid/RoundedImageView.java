@@ -28,7 +28,6 @@ public class RoundedImageView extends ImageView {
         super(context, attrs, defStyle);
     }
 
-
     @Override
     public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         if(MeasureSpec.getSize(heightMeasureSpec) > MeasureSpec.getSize(widthMeasureSpec)){

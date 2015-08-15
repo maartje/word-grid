@@ -1,56 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:stretchColumns="*"
+    android:orientation="vertical"
     android:background="#24772F">
 
-
-    <TableRow
-        android:onClick="startAnimals"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
         android:background="#FFD900"
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:gravity="center_vertical">
+        android:orientation="horizontal"
+        android:onClick="startAnimals">
 
         <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
             android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:gravity="center_horizontal"
+            android:background="#FFD900"
             android:id="@+id/animals_category"
-            android:src="@drawable/butterfly"
-            android:layout_marginLeft="@dimen/activity_margin"
-            android:layout_marginBottom="@dimen/activity_margin"
-            android:layout_marginTop="@dimen/activity_margin"/>
+            android:src="@drawable/butterfly" />
 
         <TextView
-            android:text="@string/animals_nav_button"
-            android:gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
             android:padding="@dimen/activity_margin"
+            android:gravity="center_horizontal"
+            android:background="#FFD900"
+            android:text="AnimalsXXXXXXXXXXXX"
             android:textSize="@dimen/home_text_size"/>
-    </TableRow>
 
+    </LinearLayout>
 
-    <TableRow
-        android:onClick="startVehicles"
-        android:background="#025B97"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="center_vertical">
+        android:gravity="center_horizontal"
+        android:background="#025B97"
+        android:orientation="horizontal"
+        android:onClick="startVehicles">
 
         <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
             android:layout_height="match_parent"
-            android:id="@+id/vehicles_category"
-            android:src="@drawable/category_vehicles"
-            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_width="0dp"
+            android:layout_weight="0"
+            android:layout_marginTop="@dimen/activity_margin"
             android:layout_marginBottom="@dimen/activity_margin"
-            android:layout_marginTop="@dimen/activity_margin"/>
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:gravity="center_horizontal"
+            android:background="#025B97"
+            android:id="@+id/vehicles_category"
+            android:src="@drawable/category_vehicles" />
 
         <TextView
-            android:text="@string/vehicles_nav_button"
-            android:gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
             android:padding="@dimen/activity_margin"
+            android:gravity="center_horizontal"
+            android:background="#025B97"
+            android:text="VehiclesLangWoord"
             android:textSize="@dimen/home_text_size"/>
-    </TableRow>
-
-
-</TableLayout>
-
+    </LinearLayout>
+</LinearLayout>
