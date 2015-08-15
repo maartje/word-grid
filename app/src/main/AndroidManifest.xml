@@ -16,7 +16,6 @@
         <activity
             android:name=".HomeActivity"
             android:exported="true"
-            android:label="First Words"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
