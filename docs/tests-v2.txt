@@ -1,13 +1,27 @@
 *App can be installed on SD-Card (and on phone)
 
 *Navigating between HOME, MAIN and EXTERNAL activities works fine (Android 5, Android < 5)
+****** android 5
 
-*Arabic language looks ok: app texts, icon 
+*******Arabic language looks ok: app texts, icon 
 
-*All animals and vehicles work fine
+**********All animals and vehicles work fine
 
-*Orientation change works fine
+******Orientation change works fine
 
-*German (longest words) shows fine in landscape as well as portrait mode
+********German (longest words) shows fine in landscape as well as portrait mode
+
+************App looks ok on different screen sizes
 
 *Updating works fine
+
+
+----------------------------
+
+#small improvements: 
+-detect orientation change on home screen and do not ask again for child lock
+-make sure items stay on their place when orietation changes.
+
+
+
+#check app title/icon title

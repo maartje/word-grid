@@ -1,23 +1,14 @@
-1) Reduce size
-* proguard
-* compress gif
-* wav => acc
-* do not load support lib
+#small improvements: 
+-detect orientation change on home screen and do not ask again for child lock
+-make sure items stay on their place when orietation changes.
+-make step to spoken word more smooth
 
-2) Prefer SD-Card
-* set ption to install on SD
 
-3) Home screen divided into two halfes: animals, vehices
-- works for different sizes and orientation
-- childlock and backbutton works fine
 
-4) Vehicles category
+1) Reduce size: compress gif
 
-5) support more languages:
-- currently supported
-- download languages
-- top 10 languages education
-- top 10 languages
+
+
 
 ---------------------------------------------------------------------
 - Features listed as key points (no adds, childlock, multiple languages, optimized screen for child usage)
