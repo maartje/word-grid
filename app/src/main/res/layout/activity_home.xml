@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="center_horizontal"
+        android:gravity="center_vertical"
         android:background="#FFD900"
         android:orientation="horizontal"
         android:onClick="startAnimals">
@@ -27,13 +27,13 @@
             android:src="@drawable/butterfly" />
 
         <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
             android:layout_weight="1"
             android:padding="@dimen/activity_margin"
-            android:gravity="center_horizontal"
+            android:gravity="center_vertical|end"
             android:background="#FFD900"
-            android:text="AnimalsXXXXXXXXXXXX"
+            android:text="@string/animals_nav_button"
             android:textSize="@dimen/home_text_size"/>
 
     </LinearLayout>
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:gravity="center_horizontal"
+        android:gravity="center_vertical"
         android:background="#025B97"
         android:orientation="horizontal"
         android:onClick="startVehicles">
@@ -60,13 +60,13 @@
             android:src="@drawable/category_vehicles" />
 
         <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
             android:layout_weight="1"
             android:padding="@dimen/activity_margin"
-            android:gravity="center_horizontal"
+            android:gravity="center_vertical|end"
             android:background="#025B97"
-            android:text="VehiclesLangWoord"
+            android:text="@string/vehicles_nav_button"
             android:textSize="@dimen/home_text_size"/>
     </LinearLayout>
 </LinearLayout>

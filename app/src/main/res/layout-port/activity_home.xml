@@ -31,7 +31,7 @@
             android:padding="@dimen/activity_margin"
             android:gravity="center_horizontal"
             android:background="#FFD900"
-            android:text="Animals"
+            android:text="@string/animals_nav_button"
             android:textSize="@dimen/home_text_size"/>
 
     </LinearLayout>
@@ -62,7 +62,7 @@
             android:padding="@dimen/activity_margin"
             android:gravity="center_horizontal"
             android:background="#025B97"
-            android:text="VehiclesLangWoord"
+            android:text="@string/vehicles_nav_button"
             android:textSize="@dimen/home_text_size"/>
     </LinearLayout>
 </LinearLayout>
