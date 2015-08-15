@@ -1,0 +1,13 @@
+*App can be installed on SD-Card (and on phone)
+
+*Navigating between HOME, MAIN and EXTERNAL activities works fine (Android 5, Android < 5)
+
+*Arabic language looks ok: app texts, icon 
+
+*All animals and vehicles work fine
+
+*Orientation change works fine
+
+*German (longest words) shows fine in landscape as well as portrait mode
+
+*Updating works fine
