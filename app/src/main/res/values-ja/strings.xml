@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">最初の言葉</string>
+    <string name="childlock_message">子供は、アクティブ、押しボタンを3回をロック</string>
+
+    <string name="animals_nav_button">動物</string>
+    <string name="vehicles_nav_button">車</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">İlk Kelimeler</string>
+    <string name="childlock_message">Çocuk, aktif düğmesine basın üç kez kilitleyin</string>
+
+    <string name="animals_nav_button">Hayvanlar</string>
+    <string name="vehicles_nav_button">Araçlar</string>
+</resources>

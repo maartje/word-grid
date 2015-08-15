@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">पहला शब्द</string>
+    <string name="childlock_message">बाल सक्रिय, प्रेस बटन तीन बार ताला</string>
+
+    <string name="animals_nav_button">पशु</string>
+    <string name="vehicles_nav_button">वाहन</string>
+</resources>

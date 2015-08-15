@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Eerste woorde</string>
+    <string name="childlock_message">Kind slot aktiewe, druk knoppie drie keer</string>
+
+    <string name="animals_nav_button">Diere</string>
+    <string name="vehicles_nav_button">Voertuie</string>
+</resources>

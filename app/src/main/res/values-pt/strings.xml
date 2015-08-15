@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Primeiras palavras</string>
+    <string name="childlock_message">Criança bloquear ativos, prima o botão três vezes</string>
+
+    <string name="animals_nav_button">Animais</string>
+    <string name="vehicles_nav_button">Veículos</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">คำแรก</string>
+    <string name="childlock_message">เด็กที่ใช้งานล็อคปุ่มกดสามครั้ง</string>
+
+    <string name="animals_nav_button">สัตว์</string>
+    <string name="vehicles_nav_button">ยานพาหนะ</string>
+</resources>

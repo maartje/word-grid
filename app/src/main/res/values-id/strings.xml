@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Kata-kata pertama</string>
+    <string name="childlock_message">Child lock active, press button three times</string>
+
+    <string name="animals_nav_button">Hewan</string>
+    <string name="vehicles_nav_button">Kendaraan</string>
+</resources>

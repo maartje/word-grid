@@ -1,2 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">الكلمات الأولى</string>
+    <string name="childlock_message">طفل قفل النشطة، اضغط على زر ثلاث مرات</string>
+
+    <string name="animals_nav_button">الحيوانات</string>
+    <string name="vehicles_nav_button">سيارات</string>
+</resources>

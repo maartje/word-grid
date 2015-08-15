@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Первые слова</string>
+    <string name="childlock_message">Блокировка от детей активных, нажмите кнопку три раза</string>
+
+    <string name="animals_nav_button">Животные</string>
+    <string name="vehicles_nav_button">Транспорт</string>
+</resources>
