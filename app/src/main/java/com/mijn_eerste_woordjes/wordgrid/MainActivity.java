@@ -58,6 +58,7 @@ public class MainActivity extends ChildLockedActivity {
 		gridview.setOnTouchListener(thumbViewAnimator);
 
 		audioManager = (AudioManager)getSystemService(this.AUDIO_SERVICE);
+		/*
 		if(!skipLockDialog){
 			int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
 			if (savedInstanceState == null && audioManager.getStreamVolume(AudioManager.STREAM_MUSIC) <= 0.7 * maxVolume) //open first time with media volume low
@@ -65,7 +66,7 @@ public class MainActivity extends ChildLockedActivity {
 				int initialVolume = (int)(0.7 * maxVolume);
 				audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, initialVolume, AudioManager.FLAG_SHOW_UI);
 			}
-		}
+		}*/
 	}
 
 	@Override

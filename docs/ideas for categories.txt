@@ -1,0 +1,11 @@
+- *animals
+- *vehicles
+- playground
+- wild animals
+- food (rotate if no animation available)
+- sports
+- music
+- household
+- city/outside
+- brandweer
+- beroepen

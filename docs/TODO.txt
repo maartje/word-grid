@@ -2,6 +2,9 @@
 -detect orientation change on home screen and do not ask again for child lock
 -make sure items stay on their place when orietation changes.
 -make step to spoken word more smooth
+- pin image on screen
+- pause animation
+- multi touch homescreen
 
 
 
@@ -21,6 +24,14 @@
 -------------------------------------------------
 
 
+
+v2:
+- animated animals and vehicles (with sound effect)
+- multiple languages, including: 
+engels, spaans, portugees, frans, duits, danish, nederlands
+chinees, koreaans, japans, indonesisch, thais, 
+russisch, turks, afrikaans, arabic, hindo
+- childlock 
 
 
 

@@ -1,0 +1,20 @@
+Toddler First Words
+
+---------------------------------------------------
+
+Nice animations with sound and spoken word for toddlers. <<Turkish>> language.
+
+------------------------------------------------------
+
+I'm the mother of an 1.5 year old son, and I work as a professional software developer. I developed this app for my son while he was learning his first words. He is a huge fan! I hope your kid enjoys this app as much as my son does! :) 
+
+This is an educational application for children aged 1 to 3 years. The application stimulates toddlers to learn new words and to increase their vocabulary. The application is also enjoyable for babies of 6 months or older. 
+
+The app displays a screen with various images in the category animals or vehicles. The toddler clicks on an image after which a nice animation is played, together with a realistic sound effect. Then the name of the animal or vehicle is pronounced in the <<turkish>> language.
+
+KEY FEATURES
+* Animations with sound effect
+* Spoken word in <<turkish>>
+* Child lock
+* Touch screen optimized for usage by children
+* Can be installed on SD-card

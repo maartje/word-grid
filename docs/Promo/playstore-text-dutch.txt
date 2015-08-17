@@ -1,0 +1,13 @@
+Ik ben de moeder van een zoon van 1,5 jaar oud, daarnaast ben ik software ontwikkelaar van beroep. Ik heb deze app voor mijn zoontje gemaakt, terwijl hij zijn eerste woordjes aan het leren was. Hij is een grote fan :) Ik hoop dat uw kind net zo veel plezier aan deze app beleeft als mijn zoon!
+
+Dit is een educatieve, Nederlandstalige app gericht op kinderen van 1-2 jaar oud. De applicatie stimuleert peuters om nieuwe woorden te leren en zo hun woordenschat te vergroten. De applicatie is ook geschikt voor baby's vanaf 6 maanden oud.
+
+De applicatie toont een scherm met verschillende plaatjes in de categorie dieren of voertuigen die aangeklikt kunnen worden. Hierop volgt een leuke animatie waarbij een realistisch geluidseffect te horen is. Daarna wordt de naam van het dier of voertuig in het Nederlands uitgesproken. De applicatie bevat 17 verschillende dieren en 15 verschillende voertuigen.
+
+KENMERKEN
+* Animaties met geluidseffect
+* Gesproken woord
+* Kinderslot
+* Touch screen geoptimaliseerd voor kinderen
+* Kan op de SD-kaart geïnstalleerd worden
+* Ondersteunt meerdere talen
