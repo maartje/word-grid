@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">første ord</string>
+    <string name="childlock_message">Barnesikring aktiv, trykker du knappen tre ganger</string>
+
+    <string name="animals_nav_button">Dyr</string>
+    <string name="vehicles_nav_button">Kjøretøy</string>
+</resources>

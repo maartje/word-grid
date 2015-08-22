@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pierwsze słowa</string>
+    <string name="childlock_message">Blokada przed dziećmi aktywne, naciśnij przycisk trzy razy</string>
+
+    <string name="animals_nav_button">Zwierzęta</string>
+    <string name="vehicles_nav_button">Środki</string>
+</resources>

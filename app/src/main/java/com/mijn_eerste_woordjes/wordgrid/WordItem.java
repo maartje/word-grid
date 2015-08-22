@@ -54,7 +54,7 @@ public class WordItem {
             this.soundNameId = soundPool.load(context, soundNameResourceId, 10);
         }
     }
-    
+
     private static String[] supportedLanguages()
     {
         return new String[]{
