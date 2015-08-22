@@ -84,8 +84,10 @@ public class ThumbViewImageAnimator extends BabyGestureDetector {
         int imageResId = item.getImageResourceId();
         final int soundId = item.getSoundId();
         final int soundNameId = item.getSoundNameId();
-        final int durationOfSound = item.getSoundDuration();
-        final int durationOfImageAnimation = durationOfSound + 2000;
+        final int durationOfSound = Repository.SOUND_DURATION_IN_MILLISECONDS + 500;
+        final int durationOfImageAnimation = soundNameId > 0?
+                durationOfSound + item.getDurationSpokenWord() + 500:
+                durationOfSound;
 
         final Rect startBounds = new Rect();
         final Rect endBounds = new Rect();
@@ -150,15 +152,17 @@ public class ThumbViewImageAnimator extends BabyGestureDetector {
                 super.onAnimationEnd(animation);
                 if (soundPool != null) {
                     final int streamId = soundPool.play(soundId, 0.5f, 0.5f, 1, 0, 1.0f);
-                    TimerTask task = new TimerTask() {
-                        @Override
-                        public void run() {
+                    if(soundNameId > 0){
+                        TimerTask task = new TimerTask() {
+                            @Override
+                            public void run() {
 
-                            soundPool.stop(streamId);
-                            soundPool.play(soundNameId, 0.5f, 0.5f, 1, 0, 1.0f);
-                        }
-                    };
-                    new Timer().schedule(task, durationOfSound);
+                                soundPool.stop(streamId);
+                                soundPool.play(soundNameId, 0.5f, 0.5f, 1, 0, 1.0f);
+                            }
+                        };
+                        new Timer().schedule(task, durationOfSound);
+                    }
                 }
             }
         });
