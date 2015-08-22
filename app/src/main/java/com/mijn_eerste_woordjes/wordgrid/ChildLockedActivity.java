@@ -3,6 +3,7 @@ package com.mijn_eerste_woordjes.wordgrid;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -18,10 +19,11 @@ import java.util.Calendar;
  */
 public class ChildLockedActivity  extends Activity{
 
-    public static final String ON_PAUSE_TIME = "ON_PAUSE_TIME";
+    public static final String SKIP_LOCK_DIALOG = "com.mijn_eerste_woordjes.wordgrid.SKIP_LOCK_DIALOG";
+    private static final String ON_PAUSE_TIME = "com.mijn_eerste_woordjes.wordgrid.ON_PAUSE_TIME";
     private ArrayList<Long> backPressTimes;
     private long onPauseTime;
-    protected boolean skipLockDialog;
+    private boolean skipLockDialog;
 
     public ChildLockedActivity()
     {
@@ -31,9 +33,12 @@ public class ChildLockedActivity  extends Activity{
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        Intent intent = getIntent();
+        skipLockDialog = intent.getBooleanExtra(SKIP_LOCK_DIALOG, false);
+
         /*
         if (getActionBar() != null){
             getActionBar().hide();
@@ -47,6 +52,13 @@ public class ChildLockedActivity  extends Activity{
     }
 
     @Override
+    public void onNewIntent(Intent intent){
+        super.onNewIntent(intent);
+        skipLockDialog = intent.getBooleanExtra(SKIP_LOCK_DIALOG, false);
+    }
+
+
+    @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         if(savedInstanceState != null)
@@ -57,7 +69,7 @@ public class ChildLockedActivity  extends Activity{
 
     @Override
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public void onResume() {
+    protected void onResume() {
         super.onResume();
         if (!skipLockDialog && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && !isCreatedBecauseOfOrientationChange()) {
             startLockTask();
@@ -66,10 +78,11 @@ public class ChildLockedActivity  extends Activity{
     }
 
     @Override
-    public void onPause()
+    protected void onPause()
     {
         super.onPause();
         onPauseTime = getCurrentTimeInMilliseconds();
+        skipLockDialog = false;
     }
 
     @Override

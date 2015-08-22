@@ -15,8 +15,10 @@ import java.util.List;
 
 public class MainActivity extends ChildLockedActivity {
 
-	public static final String DISPLAYED_ITEM_IDS = "DISPLAYED_ITEM_IDS";
-	public static final String NON_DISPLAYED_ITEM_IDS = "NON_DISPLAYED_ITEM_IDS";
+	public static final String CATEGORY = "com.mijn_eerste_woordjes.wordgrid.CATEGORY";
+
+	private static final String DISPLAYED_ITEM_IDS = "DISPLAYED_ITEM_IDS";
+	private static final String NON_DISPLAYED_ITEM_IDS = "NON_DISPLAYED_ITEM_IDS";
 	private SoundPool soundPool;
 	private ThumbViewImageAnimator thumbViewAnimator;
 	private AudioManager audioManager;
@@ -24,12 +26,11 @@ public class MainActivity extends ChildLockedActivity {
 	private String category;
 
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		Intent intent = getIntent();
-		category = intent.getStringExtra(HomeActivity.CATEGORY);
-		skipLockDialog = intent.getBooleanExtra(HomeActivity.SKIP_LOCK_DIALOG, false);
+		category = intent.getStringExtra(MainActivity.CATEGORY);
 
 		// initializes the views and sets the content view
 		setContentView(R.layout.activity_main);
@@ -70,7 +71,7 @@ public class MainActivity extends ChildLockedActivity {
 	}
 
 	@Override
-	public void onResume()
+	protected void onResume()
 	{
 		super.onResume();
 
@@ -83,7 +84,7 @@ public class MainActivity extends ChildLockedActivity {
 	@Override
 	protected void handleBackButton() {
 		Intent intent = new Intent(this, HomeActivity.class);
-		intent.putExtra(HomeActivity.CATEGORY, category);
+		intent.putExtra(ChildLockedActivity.SKIP_LOCK_DIALOG, true);
 		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(intent);
 	}
@@ -107,7 +108,7 @@ public class MainActivity extends ChildLockedActivity {
 	}
 
 	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
-	protected void createSoundPoolWithBuilder(){
+	private void createSoundPoolWithBuilder(){
 		AudioAttributes attributes = new AudioAttributes.Builder()
 				.setUsage(AudioAttributes.USAGE_GAME)
 				.setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
@@ -120,19 +121,18 @@ public class MainActivity extends ChildLockedActivity {
 	}
 
 	@SuppressWarnings("deprecation")
-	protected void createSoundPoolWithConstructor(){
+	private void createSoundPoolWithConstructor(){
 		soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
 	}
 
 	@Override
-	public void onPause()
+	protected void onPause()
 	{
 		super.onPause();
 
 		// release system resources
 		soundPool.release();
 		soundPool = null;
-		skipLockDialog = false;
 	}
 
 	@Override

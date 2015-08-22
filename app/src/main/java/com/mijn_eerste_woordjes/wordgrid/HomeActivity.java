@@ -10,23 +10,13 @@ import android.view.MotionEvent;
 import android.view.View;
 
 
-public class HomeActivity extends Activity {
-
-    public static final String CATEGORY = "com.mijn_eerste_woordjes.wordgrid.CATEGORY";
-    public static final String SKIP_LOCK_DIALOG = "com.mijn_eerste_woordjes.wordgrid.SKIP_LOCK_DIALOG";
-
-    private String lastCategory;
-
-    private boolean isCreatedFromMain(){
-        return lastCategory != null;
-    }
+public class HomeActivity extends ChildLockedActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = getIntent();
-        lastCategory = intent.getStringExtra(HomeActivity.CATEGORY);
+
         setContentView(R.layout.activity_home);
 
         findViewById(R.id.animals_category).setOnTouchListener(new BabyGestureDetector() {
@@ -45,14 +35,7 @@ public class HomeActivity extends Activity {
         });
     }
 
-    @Override
-    public void onPause()
-    {
-        super.onPause();
-        lastCategory = null;
-    }
-
-
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -73,27 +56,21 @@ public class HomeActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
-    public void startVehicles() {
+    private void startVehicles() {
         startMain("VEHICLES");
     }
 
-    public void startAnimals() {
+    private void startAnimals() {
         startMain("ANIMALS");
     }
 
     private void startMain(String category)
     {
         Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra(CATEGORY, category);
-        intent.putExtra(SKIP_LOCK_DIALOG, isCreatedFromMain());
+        intent.putExtra(MainActivity.CATEGORY, category);
+        intent.putExtra(ChildLockedActivity.SKIP_LOCK_DIALOG, true);
         startActivity(intent);
-    }
-
-    @Override
-    public void onNewIntent(Intent intent){
-        super.onNewIntent(intent);
-        lastCategory = intent.getStringExtra(HomeActivity.CATEGORY);
     }
 }
