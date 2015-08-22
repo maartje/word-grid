@@ -21,7 +21,7 @@ public abstract class BabyGestureDetector implements View.OnTouchListener {
                 int pointerIndex = me.getActionIndex();
                 lastPointerDownId = me.getPointerId(pointerIndex);
                 lastPointerDownTime = me.getEventTime();
-                break;
+                return true;
             }
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_POINTER_UP:

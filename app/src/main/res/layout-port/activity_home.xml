@@ -12,7 +12,7 @@
         android:gravity="center_horizontal"
         android:background="#FFD900"
         android:orientation="vertical"
-        android:onClick="startAnimals">
+        android:id="@+id/animals_category">
 
         <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
             android:layout_height="0dp"
@@ -21,7 +21,6 @@
             android:layout_marginTop="@dimen/activity_margin"
             android:gravity="center_horizontal"
             android:background="#FFD900"
-            android:id="@+id/animals_category"
             android:src="@drawable/butterfly" />
 
         <TextView
@@ -43,7 +42,7 @@
         android:gravity="center_horizontal"
         android:background="#025B97"
         android:orientation="vertical"
-        android:onClick="startVehicles">
+        android:id="@+id/vehicles_category">
 
         <com.mijn_eerste_woordjes.wordgrid.RoundedImageView
             android:layout_height="0dp"
@@ -52,7 +51,6 @@
             android:layout_marginTop="@dimen/activity_margin"
             android:gravity="center_horizontal"
             android:background="#025B97"
-            android:id="@+id/vehicles_category"
             android:src="@drawable/category_vehicles" />
 
         <TextView

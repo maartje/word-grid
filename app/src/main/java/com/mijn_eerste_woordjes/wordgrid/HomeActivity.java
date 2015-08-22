@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 
 
@@ -27,6 +28,21 @@ public class HomeActivity extends Activity {
         Intent intent = getIntent();
         lastCategory = intent.getStringExtra(HomeActivity.CATEGORY);
         setContentView(R.layout.activity_home);
+
+        findViewById(R.id.animals_category).setOnTouchListener(new BabyGestureDetector() {
+            @Override
+            public boolean onClick(MotionEvent me) {
+                startAnimals();
+                return true;
+            }
+        });
+        findViewById(R.id.vehicles_category).setOnTouchListener(new BabyGestureDetector() {
+            @Override
+            public boolean onClick(MotionEvent me) {
+                startVehicles();
+                return true;
+            }
+        });
     }
 
     @Override
@@ -59,11 +75,11 @@ public class HomeActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void startVehicles(View view) {
+    public void startVehicles() {
         startMain("VEHICLES");
     }
 
-    public void startAnimals(View view) {
+    public void startAnimals() {
         startMain("ANIMALS");
     }
 
