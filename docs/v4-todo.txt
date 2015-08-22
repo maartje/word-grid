@@ -1,8 +1,10 @@
 ## reduce size by optimizing gif
 - touch sensitive home screen
 - detect orientation change on home screen and do not ask again for child lock
-- make sure items stay on their place when orietation changes.
+## make sure items stay on their place when orietation changes.
 ## remove 'default word', configure length of animation
+(?) improve performance for opening main screen
+
 
 CHECK IF RESOURCE EXIST
 int test = mContext.getResources().getIdentifier("my_resource_name", "drawable", mContext.getPackageName());
