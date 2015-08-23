@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Maneno Kwanza</string>
+    <string name="childlock_message">Mtoto kufuli kazi, waandishi wa habari kifungo mara tatu</string>
+
+    <string name="animals_nav_button">Wanyama</string>
+    <string name="vehicles_nav_button">Magari</string>
+</resources>

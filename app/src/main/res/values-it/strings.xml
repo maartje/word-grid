@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Prime Parole</string>
+    <string name="childlock_message">Blocco bambini attivo, premere il pulsante per tre volte</string>
+
+    <string name="animals_nav_button">Animali</string>
+    <string name="vehicles_nav_button">Veicoli</string>
+</resources>

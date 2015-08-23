@@ -58,8 +58,8 @@ public class WordItem {
     private static String[] supportedLanguages()
     {
         return new String[]{
-                "af", "ar", "da", "de", "en", "es", "fr", "hi", "id", "ja",
-                "ko", "nl", "pt", "ru", "th", "tr", "zh"
+                "af", "ar", "da", "de", "en", "es", "fr", "hi", "id", "it", "ja",
+                "ko", "nl", "pt", "ro", "ru", "sw", "th", "tr", "zh"
         };
     }
 

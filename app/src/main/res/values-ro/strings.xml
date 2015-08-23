@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Primele Cuvinte</string>
+    <string name="childlock_message">Blocare pentru copii activi, apasa?i butonul de trei ori</string>
+
+    <string name="animals_nav_button">Animale</string>
+    <string name="vehicles_nav_button">Vehicule</string>
+</resources>
