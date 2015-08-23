@@ -84,9 +84,9 @@ public class ThumbViewImageAnimator extends BabyGestureDetector {
         int imageResId = item.getImageResourceId();
         final int soundId = item.getSoundId();
         final int soundNameId = item.getSoundNameId();
-        final int durationOfSound = Repository.SOUND_DURATION_IN_MILLISECONDS + 500;
+        final int durationOfSound = Repository.SOUND_DURATION_IN_MILLISECONDS + 1000;
         final int durationOfImageAnimation = soundNameId > 0?
-                durationOfSound + item.getDurationSpokenWord() + 500:
+                durationOfSound + item.getDurationSpokenWord() + 1000:
                 durationOfSound;
 
         final Rect startBounds = new Rect();

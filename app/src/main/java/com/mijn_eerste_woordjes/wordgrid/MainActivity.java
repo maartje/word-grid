@@ -19,6 +19,7 @@ public class MainActivity extends ChildLockedActivity {
 
 	private static final String DISPLAYED_ITEM_IDS = "DISPLAYED_ITEM_IDS";
 	private static final String NON_DISPLAYED_ITEM_IDS = "NON_DISPLAYED_ITEM_IDS";
+
 	private SoundPool soundPool;
 	private ThumbViewImageAnimator thumbViewAnimator;
 	private AudioManager audioManager;
@@ -28,6 +29,7 @@ public class MainActivity extends ChildLockedActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setLockBackButton(true);
 
 		Intent intent = getIntent();
 		category = intent.getStringExtra(MainActivity.CATEGORY);

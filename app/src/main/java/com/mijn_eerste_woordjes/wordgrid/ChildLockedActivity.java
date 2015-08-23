@@ -24,12 +24,18 @@ public class ChildLockedActivity  extends Activity{
     private ArrayList<Long> backPressTimes;
     private long onPauseTime;
     private boolean skipLockDialog;
+    private boolean lockBackButton;
+
+    protected void setLockBackButton(boolean lockBackButton){
+        this.lockBackButton = lockBackButton;
+    }
 
     public ChildLockedActivity()
     {
         backPressTimes = new ArrayList<Long>();
         onPauseTime = 0;
         skipLockDialog = false;
+        lockBackButton = Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP;
     }
 
     @Override
@@ -99,11 +105,11 @@ public class ChildLockedActivity  extends Activity{
 
     @Override
     public void onBackPressed() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (!lockBackButton) {
             handleBackButton();
-            return; //screen pinning is used as child lock
+            return;
         }
-            long currentTimeInMilliseconds = getCurrentTimeInMilliseconds();
+        long currentTimeInMilliseconds = getCurrentTimeInMilliseconds();
 
         boolean isInSequence = !backPressTimes.isEmpty() && currentTimeInMilliseconds - backPressTimes.get(0) < 1200;
         if(!isInSequence)

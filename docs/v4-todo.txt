@@ -1,6 +1,6 @@
 ## reduce size by optimizing gif
 ## touch sensitive home screen
-- detect orientation change on home screen and do not ask again for child lock
+## detect orientation change on home screen and do not ask again for child lock
 - make sure items stay on their place when orietation changes.
 ## remove 'default word', configure length of animation
 (?) improve performance for opening main screen
