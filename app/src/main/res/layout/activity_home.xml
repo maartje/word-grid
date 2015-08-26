@@ -10,7 +10,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center_vertical"
-        android:background="#FFD900"
+        android:background="@color/yellow"
         android:orientation="horizontal"
         android:id="@+id/animals_category">
 
@@ -22,7 +22,7 @@
             android:layout_marginBottom="@dimen/activity_margin"
             android:layout_marginLeft="@dimen/activity_margin"
             android:gravity="center_horizontal"
-            android:background="#FFD900"
+            android:background="@color/yellow"
             android:src="@drawable/butterfly" />
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_weight="1"
             android:padding="@dimen/activity_margin"
             android:gravity="center_vertical|end"
-            android:background="#FFD900"
+            android:background="@color/yellow"
             android:text="@string/animals_nav_button"
             android:textSize="@dimen/home_text_size"
             />
@@ -43,7 +43,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center_vertical"
-        android:background="#025B97"
+        android:background="@color/blue"
         android:orientation="horizontal"
         android:id="@+id/vehicles_category">
 
@@ -55,7 +55,7 @@
             android:layout_marginBottom="@dimen/activity_margin"
             android:layout_marginLeft="@dimen/activity_margin"
             android:gravity="center_horizontal"
-            android:background="#025B97"
+            android:background="@color/blue"
             android:src="@drawable/category_vehicles" />
 
         <TextView
@@ -64,7 +64,7 @@
             android:layout_weight="1"
             android:padding="@dimen/activity_margin"
             android:gravity="center_vertical|end"
-            android:background="#025B97"
+            android:background="@color/blue"
             android:text="@string/vehicles_nav_button"
             android:textSize="@dimen/home_text_size"/>
     </LinearLayout>

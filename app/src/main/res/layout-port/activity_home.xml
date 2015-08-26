@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#24772F">
+    android:background="@color/green">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center_horizontal"
-        android:background="#FFD900"
+        android:background="@color/yellow"
         android:orientation="vertical"
         android:id="@+id/animals_category">
 
@@ -20,7 +20,7 @@
             android:layout_weight="1"
             android:layout_marginTop="@dimen/activity_margin"
             android:gravity="center_horizontal"
-            android:background="#FFD900"
+            android:background="@color/yellow"
             android:src="@drawable/butterfly" />
 
         <TextView
@@ -29,7 +29,7 @@
             android:layout_weight="0"
             android:padding="@dimen/activity_margin"
             android:gravity="center_horizontal"
-            android:background="#FFD900"
+            android:background="@color/yellow"
             android:text="@string/animals_nav_button"
             android:textSize="@dimen/home_text_size"/>
 
@@ -40,7 +40,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center_horizontal"
-        android:background="#025B97"
+        android:background="@color/blue"
         android:orientation="vertical"
         android:id="@+id/vehicles_category">
 
@@ -50,7 +50,7 @@
             android:layout_weight="1"
             android:layout_marginTop="@dimen/activity_margin"
             android:gravity="center_horizontal"
-            android:background="#025B97"
+            android:background="@color/blue"
             android:src="@drawable/category_vehicles" />
 
         <TextView
@@ -59,7 +59,7 @@
             android:layout_weight="0"
             android:padding="@dimen/activity_margin"
             android:gravity="center_horizontal"
-            android:background="#025B97"
+            android:background="@color/blue"
             android:text="@string/vehicles_nav_button"
             android:textSize="@dimen/home_text_size"/>
     </LinearLayout>

@@ -1,14 +1,8 @@
 #small improvements: 
--detect orientation change on home screen and do not ask again for child lock
--make sure items stay on their place when orietation changes.
--make step to spoken word more smooth
-- pin image on screen
-- pause animation
-- multi touch homescreen
 
-
-
-1) Reduce size: compress gif
+- support more languages
+- settings: language, lock backbutton, show/hide items
+- make sure items stay on their place when orietation changes.
 
 
 
