@@ -20,7 +20,6 @@
             android:layout_weight="1"
             android:layout_marginTop="@dimen/activity_margin"
             android:gravity="center_horizontal"
-            android:background="@color/yellow"
             android:src="@drawable/butterfly" />
 
         <TextView
@@ -29,7 +28,6 @@
             android:layout_weight="0"
             android:padding="@dimen/activity_margin"
             android:gravity="center_horizontal"
-            android:background="@color/yellow"
             android:text="@string/animals_nav_button"
             android:textSize="@dimen/home_text_size"/>
 
@@ -50,7 +48,6 @@
             android:layout_weight="1"
             android:layout_marginTop="@dimen/activity_margin"
             android:gravity="center_horizontal"
-            android:background="@color/blue"
             android:src="@drawable/category_vehicles" />
 
         <TextView
@@ -59,7 +56,6 @@
             android:layout_weight="0"
             android:padding="@dimen/activity_margin"
             android:gravity="center_horizontal"
-            android:background="@color/blue"
             android:text="@string/vehicles_nav_button"
             android:textSize="@dimen/home_text_size"/>
     </LinearLayout>

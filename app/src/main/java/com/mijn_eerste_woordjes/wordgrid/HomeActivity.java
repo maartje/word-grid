@@ -35,6 +35,13 @@ public class HomeActivity extends ChildLockedActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        findViewById(R.id.vehicles_category).setBackgroundColor(getResources().getColor(R.color.blue));
+        findViewById(R.id.animals_category).setBackgroundColor(getResources().getColor(R.color.yellow));
+    }
+
     /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,10 +66,12 @@ public class HomeActivity extends ChildLockedActivity {
     }*/
 
     private void startVehicles() {
+        findViewById(R.id.vehicles_category).setBackgroundColor(getResources().getColor(R.color.dark_blue));
         startMain("VEHICLES");
     }
 
     private void startAnimals() {
+        findViewById(R.id.animals_category).setBackgroundColor(getResources().getColor(R.color.dark_yellow));
         startMain("ANIMALS");
     }
 
