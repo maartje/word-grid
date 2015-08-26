@@ -51,15 +51,21 @@ public class WordItem {
     {
         this.soundId = soundPool.load(context, soundResourceId, 1);
         if (isSupportedLanguage(Locale.getDefault().getLanguage())){
-            this.soundNameId = soundPool.load(context, soundNameResourceId, 10);
+            try{
+                this.soundNameId = soundPool.load(context, soundNameResourceId, 10);
+            }
+            catch (Exception e){
+                //ignore exception
+            }
         }
     }
 
     private static String[] supportedLanguages()
     {
         return new String[]{
-                "af", "ar", "da", "de", "en", "es", "fr", "hi", "id", "it", "ja",
-                "ko", "nl", "pt", "ro", "ru", "sw", "th", "tr", "zh"
+                "ar", "da", "de", "en", "es", "fr", "hi", "id", "it", "ja",
+                "ko", "nl", "no", "pl", "pt", "ru", "th", "tr", "zh"
+                // Bad audio: "af", "ro", "sw",
         };
     }
 
