@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Elso Szavak</string>
+    <string name="childlock_message">Gyerekzár aktív, nyomja meg a gombot háromszor</string>
+
+    <string name="animals_nav_button">Állatok</string>
+    <string name="vehicles_nav_button">Járművek</string>
+</resources>
