@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">První Slova</string>
+    <string name="childlock_message">Dětská pojistka aktivní, stiskněte tlačítko třikrát</string>
+
+    <string name="animals_nav_button">Zvěř</string>
+    <string name="vehicles_nav_button">Vozidla</string>
+</resources>

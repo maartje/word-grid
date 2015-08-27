@@ -63,7 +63,7 @@ public class WordItem {
     private static String[] supportedLanguages()
     {
         return new String[]{
-                "ar", "da", "de", "en", "es", "fr", "hi", "hu", "id", "it", "ja",
+                "ar", "cs", "da", "de", "el", "en", "es", "fr", "hi", "hu", "id", "it", "ja",
                 "ko", "nl", "no", "pl", "pt", "ru", "th", "tr", "zh"
                 // Bad audio: "af", "ro", "sw",
         };

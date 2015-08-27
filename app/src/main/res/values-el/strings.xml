@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Πρώτα λέξεις</string>
+    <string name="childlock_message">Κλείδωμα ενεργό, πατήστε το κουμπί τρεις φορές</string>
+
+    <string name="animals_nav_button">Ζώα</string>
+    <string name="vehicles_nav_button">Οχήματα</string>
+</resources>
