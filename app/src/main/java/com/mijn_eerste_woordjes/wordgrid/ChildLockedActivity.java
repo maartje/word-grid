@@ -139,7 +139,7 @@ public class ChildLockedActivity  extends Activity{
 
     private void showBackButtonHelpMessage() {
         Context context = getApplicationContext();
-        CharSequence text = "Childlock active, press button three times";
+        CharSequence text = getResources().getText(R.string.childlock_message);
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);

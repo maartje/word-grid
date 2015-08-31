@@ -14,7 +14,7 @@ public class Repository {
     public ArrayList<WordItem> getWordItems(String category){
         switch (category){
             case "ANIMALS": return getAnimals();
-            case "VEHICLES": return getVehicles();
+            case "VEHICLES": return getProfessions(); //getVehicles();
             case "ALL": return getAll();
             default:
                 return getAnimals();
@@ -69,4 +69,26 @@ public class Repository {
         wordItems.add(new WordItem(18, R.drawable.rooster, R.raw.rooster, DEFAULT_ANIMAL_NAME_DURATION_IN_MILLISECONDS, R.raw.rooster_word));
         return wordItems;
     }
+
+    private ArrayList<WordItem> getProfessions() {
+        ArrayList<WordItem> wordItems = new ArrayList<WordItem>();
+        wordItems.add(new WordItem(42, R.drawable.cashier, R.raw.cashier, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.cashier_word)); //+-
+        wordItems.add(new WordItem(43, R.drawable.cleaner, R.raw.cleaner, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.cleaner_word)); //+-
+        wordItems.add(new WordItem(44, R.drawable.construction_worker, R.raw.construction_worker, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.construction_worker_word)); //+-
+        wordItems.add(new WordItem(45, R.drawable.doctor, R.raw.doctor, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.doctor_word)); //+
+        wordItems.add(new WordItem(46, R.drawable.farmer, R.raw.farmer, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.farmer_word)); //++
+        wordItems.add(new WordItem(47, R.drawable.fireman, R.raw.firefighter, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.firefighter_word)); //++ TODO
+        wordItems.add(new WordItem(48, R.drawable.hairdresser, R.raw.hairdresser, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.hairdresser_word)); //++
+        wordItems.add(new WordItem(49, R.drawable.magician, R.raw.magician, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.magician_word)); //+
+        wordItems.add(new WordItem(50, R.drawable.musician, R.raw.musician, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.musician_word)); //++
+        wordItems.add(new WordItem(51, R.drawable.officeworker, R.raw.office_worker, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.officeworker_word)); //+ programmer
+        wordItems.add(new WordItem(52, R.drawable.programmer, R.raw.programmer, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.programmer_word)); //+
+        wordItems.add(new WordItem(54, R.drawable.policeman, R.raw.policeman, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.policeman_word)); //+
+        wordItems.add(new WordItem(56, R.drawable.shoemaker, R.raw.shoemaker, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.shoemaker_word)); //+
+        wordItems.add(new WordItem(57, R.drawable.tailor, R.raw.tailor, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.tailor_word)); //+-
+        wordItems.add(new WordItem(57, R.drawable.teacher, R.raw.teacher, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.teacher_word)); //+-
+        wordItems.add(new WordItem(57, R.drawable.vendor, R.raw.vendor, DEFAULT_VEHICLE_NAME_DURATION_IN_MILLISECONDS, R.raw.vendor_word)); //+
+        return wordItems;
+    }
+
 }

@@ -12,24 +12,30 @@ import android.view.View;
 
 public class HomeActivity extends ChildLockedActivity {
 
+    private boolean categorySelected;
+    private Category animals;
+    private Category vehicles;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        animals = new Category(R.id.animals_category, R.color.yellow, R.color.dark_yellow, "ANIMALS");
+        vehicles = new Category(R.id.vehicles_category, R.color.blue, R.color.dark_blue, "VEHICLES");
 
         setContentView(R.layout.activity_home);
 
         findViewById(R.id.animals_category).setOnTouchListener(new BabyGestureDetector() {
             @Override
             public boolean onClick(MotionEvent me) {
-                startAnimals();
+                startCategory(animals);
                 return true;
             }
         });
         findViewById(R.id.vehicles_category).setOnTouchListener(new BabyGestureDetector() {
             @Override
             public boolean onClick(MotionEvent me) {
-                startVehicles();
+                startCategory(vehicles);
                 return true;
             }
         });
@@ -38,8 +44,9 @@ public class HomeActivity extends ChildLockedActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        findViewById(R.id.vehicles_category).setBackgroundColor(getResources().getColor(R.color.blue));
-        findViewById(R.id.animals_category).setBackgroundColor(getResources().getColor(R.color.yellow));
+        categorySelected = false;
+        findViewById(R.id.vehicles_category).setBackgroundColor(getResources().getColor(vehicles.bgColor));
+        findViewById(R.id.animals_category).setBackgroundColor(getResources().getColor(animals.bgColor));
     }
 
     /*
@@ -65,14 +72,13 @@ public class HomeActivity extends ChildLockedActivity {
         return super.onOptionsItemSelected(item);
     }*/
 
-    private void startVehicles() {
-        findViewById(R.id.vehicles_category).setBackgroundColor(getResources().getColor(R.color.dark_blue));
-        startMain("VEHICLES");
-    }
-
-    private void startAnimals() {
-        findViewById(R.id.animals_category).setBackgroundColor(getResources().getColor(R.color.dark_yellow));
-        startMain("ANIMALS");
+    private void startCategory(Category category){
+        if(categorySelected){
+            return;
+        }
+        findViewById(category.viewId).setBackgroundColor(getResources().getColor(category.bgSelectedColor));
+        categorySelected = true;
+        startMain(category.name);
     }
 
     private void startMain(String category)
@@ -81,5 +87,21 @@ public class HomeActivity extends ChildLockedActivity {
         intent.putExtra(MainActivity.CATEGORY, category);
         intent.putExtra(ChildLockedActivity.SKIP_LOCK_DIALOG, true);
         startActivity(intent);
+    }
+
+    private class Category {
+        private int viewId;
+        private int bgColor;
+        private int bgSelectedColor;
+        private String name;
+
+        private Category(int viewId, int bgColor, int bgSelectedColor, String name)
+        {
+            this.viewId = viewId;
+            this.bgColor = bgColor;
+            this.bgSelectedColor = bgSelectedColor;
+            this.name = name;
+        }
+
     }
 }
