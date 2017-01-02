@@ -1,3 +1,3 @@
 # Overview
 
-Application for toddlers to learn new words
+Android application for toddlers to learn new words.
