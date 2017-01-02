@@ -4,5 +4,6 @@
 
     <string name="animals_nav_button">Dieren</string>
     <string name="vehicles_nav_button">Voertuigen</string>
+    <string name="jobs_nav_button">Beroepen</string>
 
 </resources>

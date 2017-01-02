@@ -14,10 +14,11 @@ public class Repository {
     public ArrayList<WordItem> getWordItems(String category){
         switch (category){
             case "ANIMALS": return getAnimals();
-            case "VEHICLES": return getProfessions(); //getVehicles();
+            case "VEHICLES": return getVehicles(); //getVehicles();
+            case "JOBS": return getProfessions(); //getVehicles();
             case "ALL": return getAll();
             default:
-                return getAnimals();
+                return getProfessions();
         }
     }
 

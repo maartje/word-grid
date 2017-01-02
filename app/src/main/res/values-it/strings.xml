@@ -4,4 +4,5 @@
 
     <string name="animals_nav_button">Animali</string>
     <string name="vehicles_nav_button">Veicoli</string>
+    <string name="jobs_nav_button">Jobs</string>
 </resources>

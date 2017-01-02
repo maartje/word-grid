@@ -15,6 +15,7 @@ public class HomeActivity extends ChildLockedActivity {
     private boolean categorySelected;
     private Category animals;
     private Category vehicles;
+    private Category jobs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class HomeActivity extends ChildLockedActivity {
 
         animals = new Category(R.id.animals_category, R.color.yellow, R.color.dark_yellow, "ANIMALS");
         vehicles = new Category(R.id.vehicles_category, R.color.blue, R.color.dark_blue, "VEHICLES");
+        jobs = new Category(R.id.jobs_category, R.color.green, R.color.dark_green, "JOBS ");
 
         setContentView(R.layout.activity_home);
 
@@ -36,6 +38,13 @@ public class HomeActivity extends ChildLockedActivity {
             @Override
             public boolean onClick(MotionEvent me) {
                 startCategory(vehicles);
+                return true;
+            }
+        });
+        findViewById(R.id.jobs_category).setOnTouchListener(new BabyGestureDetector() {
+            @Override
+            public boolean onClick(MotionEvent me) {
+                startCategory(jobs);
                 return true;
             }
         });

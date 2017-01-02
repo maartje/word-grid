@@ -4,4 +4,5 @@
 
     <string name="animals_nav_button">Hayvanlar</string>
     <string name="vehicles_nav_button">Araçlar</string>
+    <string name="jobs_nav_button">Jobs</string>
 </resources>
